@@ -2,6 +2,7 @@ body,
 html {
     margin: 0;
     padding: 0;
+    display: grid;
 }
 
 body {
@@ -12,7 +13,7 @@ body {
     background: #ffffff;
     box-sizing: border-box;
     position: absolute;
-    width: 100vw;
+    width: 100%;
     height: 12vh;
     left: 0px;
     top: 0px;
@@ -92,7 +93,9 @@ body {
 .hero {
     box-sizing: border-box;
     margin-top: 12vh;
-    width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
     height: 88vh;
     background-color: #f18f01;
     background-image: url("./assets/hero.jpeg");
@@ -158,4 +161,379 @@ form button {
     border-radius: 4px;
     color: #ffffff;
     border: none;
+}
+
+.how-to {
+    box-sizing: border-box;
+    width: 100%;
+    height: 84vh;
+    margin-left: 0;
+    margin-right: 0;
+    /* background-color: #68a67d; */
+    align-items: center;
+    text-align: center;
+}
+
+.how-to h1 {
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 5.6vh;
+    padding-top: 4vh;
+    color: #833500;
+}
+
+.how-to p {
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.4vh;
+    color: #f18f01;
+    width: 32vw;
+    margin-top: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12vw;
+    padding-top: 80px;
+    margin-left: 4vw;
+    margin-right: 4vw;
+}
+
+.inner-cont {
+    display: flex;
+    height: 300px;
+    width: 300px;
+    /* background-color: #f18f01; */
+    /* border: 2px solid black; */
+    justify-content: center;
+}
+
+.inner-cont h4 {    
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3vh;
+    color: #833500;
+    width: 20vw;
+    padding-top: 20vh;
+    position: absolute;   
+}
+
+.inner-cont h5 {    
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.2vh;
+    color: #5f5f5f;
+    width: 20vw;
+    padding-top: 27vh;
+    position: absolute;
+}
+
+.icon {
+    display: grid;
+    height: 106px;
+    width: 106px;
+    background-color: #bbddc6;
+    border-radius: 30px;
+    margin-top: 0px;
+    place-items: center;
+}
+
+.popular {
+    box-sizing: border-box;
+    width: 100%;
+    height: 121vh;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #ffffff;
+    align-items: center;
+    text-align: center;
+}
+
+.popular h1 {
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 5.6vh;
+    padding-top: 4vh;
+    color: #833500;
+}
+
+.popular p {
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.4vh;
+    color: #f18f01;
+    width: 32vw;
+    margin-top: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.tabContainer {
+    width: 100%;
+    height: 600px;
+    padding-top: 16vh;
+}
+
+.tabContainer .buttonContainer {
+    height: 10%;
+}
+
+.tabContainer .buttonContainer button {
+    width: 25%;
+    height: 100%;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #5f5f5f;
+    background-color: #ffffff;
+}
+
+.tabContainer .buttonContainer button:hover {
+    color: #f18f01;
+    background-color: #F5ECD7;
+}
+
+.tabContainer .tabPanel {
+    height: 78%;
+    /* background-color: gray; */
+    color: #f18f01;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    display: none;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: #5f5f5f;
+    position: absolute;
+    margin-top: 0;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding-top: 4vh;
+    margin-left: 4vw;
+    margin-right: 4vw;
+}
+
+.cards h4 {
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+    padding-left: 2vw;
+    text-shadow: 0vh 0.52vh 3.125vh #000000;
+}
+
+.cards button {
+    width: 116px;
+    height: 44px;
+    margin-top: 36vh;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #5f5f5f;
+    background-color: #ffffff;
+    float: right;
+    margin-right: 2vw;
+}
+
+.cards button:hover {
+    color: #ffffff;
+    background-color: #f18f01;
+}
+
+.cardp1 {
+    height: 360px;
+    background-color: #F5ECD7;
+    border: 4px solid #f18f01;
+    border-radius: 8px;
+    background-image: url("./assets/jollof\ rice.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.cardp2 {
+    height: 360px;
+    background-color: #F5ECD7;
+    border: 4px solid #f18f01;
+    border-radius: 8px;
+    background-image: url("./assets/beans\ &\ plantain.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.cardp3 {
+    height: 360px;
+    background-color: #F5ECD7;
+    border: 4px solid #f18f01;
+    border-radius: 8px;
+    background-image: url("./assets/fried\ rice.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.cardp4 {
+    height: 360px;
+    background-color: #F5ECD7;
+    border: 4px solid #f18f01;
+    border-radius: 8px;
+    background-image: url("./assets/yam\ &\ egg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.cardv1 {
+    height: 360px;
+    background-color: #F5ECD7;
+    border: 4px solid #68a67d;
+    border-radius: 8px;
+    background-image: url("./assets/jollof\ rice.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.cardv2 {
+    height: 360px;
+    background-color: #F5ECD7;
+    border: 4px solid #68a67d;
+    border-radius: 8px;
+    background-image: url("./assets/beans\ &\ plantain.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.cardv3 {
+    height: 360px;
+    background-color: #F5ECD7;
+    border: 4px solid #68a67d;
+    border-radius: 8px;
+    background-image: url("./assets/fried\ rice.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.cardv4 {
+    height: 360px;
+    background-color: #F5ECD7;
+    border: 4px solid #68a67d;
+    border-radius: 8px;
+    background-image: url("./assets/yam\ &\ egg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.cardf1 {
+    height: 360px;
+    background-color: #F5ECD7;
+    border: 4px solid #5f5f5f;
+    border-radius: 8px;
+    background-image: url("./assets/jollof\ rice.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.cardf2 {
+    height: 360px;
+    background-color: #F5ECD7;
+    border: 4px solid #5f5f5f;
+    border-radius: 8px;
+    background-image: url("./assets/beans\ &\ plantain.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.cardf3 {
+    height: 360px;
+    background-color: #F5ECD7;
+    border: 4px solid #5f5f5f;
+    border-radius: 8px;
+    background-image: url("./assets/fried\ rice.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.cardf4 {
+    height: 360px;
+    background-color: #F5ECD7;
+    border: 4px solid #5f5f5f;
+    border-radius: 8px;
+    background-image: url("./assets/yam\ &\ egg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.cards1 {
+    height: 360px;
+    background-color: #F5ECD7;
+    border: 4px solid #ff2e2e;
+    border-radius: 8px;
+    background-image: url("./assets/jollof\ rice.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.cards2 {
+    height: 360px;
+    background-color: #F5ECD7;
+    border: 4px solid #ff2e2e;
+    border-radius: 8px;
+    background-image: url("./assets/beans\ &\ plantain.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.cards3 {
+    height: 360px;
+    background-color: #F5ECD7;
+    border: 4px solid #ff2e2e;
+    border-radius: 8px;
+    background-image: url("./assets/fried\ rice.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.cards4 {
+    height: 360px;
+    background-color: #F5ECD7;
+    border: 4px solid #ff2e2e;
+    border-radius: 8px;
+    background-image: url("./assets/yam\ &\ egg.jpg");
+    background-size: cover;
+    background-position: center;
 }
