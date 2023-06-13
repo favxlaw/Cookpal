@@ -15,3 +15,31 @@ function showPanel(panelIndex,colorCode) {
     tabPanels[panelIndex].style.backgroundColor=colorCode;
 }
 showPanel(0,'#ffffff');
+
+
+
+
+
+
+
+
+const elements = document.querySelectorAll('.form, .inner-cont, .cards, .benefits-container .left, .benefits-container .right');
+
+const animateOnIntersection = (entries, observer) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('slide-in');
+            observer.unobserve(entry.target); // Optionally, stop observing once animation has been triggered
+        }
+    });
+};
+
+const options = {
+    threshold: 0.05, // Adjust this threshold as per your needs
+};
+
+const observer = new IntersectionObserver(animateOnIntersection, options);
+
+elements.forEach((element) => {
+    observer.observe(element);
+});

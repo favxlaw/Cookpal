@@ -88,7 +88,9 @@ html {
 }
 
 .hero {
-    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+    /* box-sizing: border-box; */
     margin-top: 12vh;
     margin-left: 0;
     margin-right: 0;
@@ -106,18 +108,24 @@ html {
     font-style: normal;
     font-weight: 800;
     font-size: 6vh;
-    padding-top: 30vh;
     color: #833500;   
     text-shadow: 0vh 0.52vh 3.125vh #ffffff;
+    animation: slideInUp;
+    animation-duration: 1s;
 }
 
 .form {
     position: absolute;
     height: auto;
     width: auto;
-    left: 50%;
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
+    padding-top: 24vh;
+    opacity: 0;
+}
+
+.form.slide-in {
+    animation: slideInUp;
+    animation-duration: 1s;
+    opacity: 1;
 }
 
 form {
@@ -231,6 +239,13 @@ form button:hover {
     padding-top: 4vh;
     padding-bottom: 4vh;
     border-radius: 8px;
+    opacity: 0;
+}
+
+.inner-cont.slide-in {
+    animation: slideInUp;
+    animation-duration: 1s;
+    opacity: 1;
 }
 
 .inner-cont h4 {    
@@ -361,6 +376,13 @@ form button:hover {
     padding-top: 4vh;
     margin-left: 4vw;
     margin-right: 4vw;
+    opacity: 0;
+}
+
+.cards.slide-in {
+    animation: slideInUp;
+    animation-duration: 1s;
+    opacity: 1;
 }
 
 .cards h4 {
@@ -399,6 +421,35 @@ form button:hover {
 .cards button:hover {
     color: #ffffff;
     background-color: #f18f01;
+}
+
+.show-more-div {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    padding-bottom: 8vh;
+}
+
+.show-more {
+    display: grid;
+    place-items: center;
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #68a67d;
+    background-color: #ffffff;
+    width: 200px;
+    height: 48px;
+    border: 1.4px solid #68a67d;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.show-more:hover {
+    color: #ffffff;
+    background-color: #68a67d;
 }
 
 .cardp1 {
@@ -559,4 +610,183 @@ form button:hover {
     background-image: url("./assets/yam\ &\ egg.jpg");
     background-size: cover;
     background-position: center;
+}
+
+.benefits {
+    box-sizing: border-box;
+    width: 100%;
+    /* height: 84vh; */
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+    /* background-color: #68a67d; */
+    align-items: center;
+    text-align: center;
+}
+
+.benefits h1 {
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 5.2vh;
+    padding-top: 4vh;
+    color: #833500;
+    width: 100%;
+    align-self: center;
+}
+
+.benefits p {
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.4vh;
+    color: #f18f01;
+    width: 80%;
+    margin-top: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin-bottom: 0px;
+}
+
+.benefits-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 80px;
+    height: auto;
+    margin-top: 0px;
+    padding-top: 12vh;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    padding-bottom: 8vh;
+}
+
+.benefits-container .left {
+    display: grid;
+    place-items: center;
+    height: 400px;
+    width: 100%;
+    justify-content: center;
+    border-radius: 8px;
+    background-image: url("./assets/vegetables.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    /* border: 2px solid #000000; */
+}
+
+.benefits-container .left.slide-in {
+    animation: slideInUp;
+    animation-duration: 1s;
+    opacity: 1;
+}
+
+.benefits-container .right {
+    display: grid;
+    gap: 12px;
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
+    opacity: 0;
+}
+
+.benefits-container .right.slide-in {
+    animation: slideInUp;
+    animation-duration: 1s;
+    opacity: 1;
+}
+
+.benefits-container .right .one {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    height: auto;
+    width: auto;
+}
+
+.benefits-container .right .two {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    height: auto;
+    width: auto;
+}
+
+.benefits-container .right .three {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    height: auto;
+    width: auto;
+}
+
+.benefits-container .right .icon {
+    height: 64px;
+    width: 64px;
+    background-color: #bbddc6;
+    border-radius: 8px;
+    margin-top: 0px;
+    place-items: center;
+    margin-top: 24px;
+}
+
+.benefits-container .right .text {
+    width: 80%;
+}
+
+.benefits-container .right h4 {    
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(2.8vh, 3vh, 3.2vh);
+    color: #833500;
+    text-align: left;
+}
+
+.benefits-container .right h5 {    
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: clamp(2.0vh, 2.2vh, 2.4vh);
+    color: #5f5f5f;
+    text-align: left;
+    width: 100%;
+}
+
+.testimonials {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #ffffff;
+    align-items: center;
+    text-align: center;
+}
+
+.testimonials h1 {
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 5.2vh;
+    padding-top: 4vh;
+    color: #833500;
+    width: 100%;
+    align-self: center;
+}
+
+.testimonials p {
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.4vh;
+    color: #f18f01;
+    width: 80%;
+    margin-top: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin-bottom: 0px;
 }
