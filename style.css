@@ -6,6 +6,41 @@ html {
     background: #F5ECD7;
 }
 
+#backToTopBtn {
+    display: none;
+    /* Initially hidden */
+    position: fixed;
+    bottom: 4vw;
+    right: 4vw;
+    width: 64px;
+    height: 64px;
+    background-color: #ffffff;
+    color: #68a67d;
+    border-radius: 50%;
+    border: 2px solid #68a67d;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+#backToTopBtn:hover {
+    opacity: 1;
+    background-color: #68a67d;
+    border: none;
+    color: #ffffff;
+}
+
+#backToTopBtn span {
+    display: none;
+    font-family: "Plus Jakarta Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+#backToTopBtn:hover span {
+    display: inline;
+}
+
 .topbar {
     background: #ffffff;
     box-sizing: border-box;

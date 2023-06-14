@@ -1,3 +1,4 @@
+// switch recipe type
 var tabButtons=document.querySelectorAll(".tabContainer .buttonContainer button");
 var tabPanels=document.querySelectorAll(".tabContainer .tabPanel");
 
@@ -22,7 +23,7 @@ showPanel(0,'#ffffff');
 
 
 
-
+// animate on scroll
 const elements = document.querySelectorAll('.form, .inner-cont, .cards, .benefits-container .left, .benefits-container .right');
 
 const animateOnIntersection = (entries, observer) => {
@@ -43,3 +44,33 @@ const observer = new IntersectionObserver(animateOnIntersection, options);
 elements.forEach((element) => {
     observer.observe(element);
 });
+
+
+
+
+// scroll back to top button
+const backToTopBtn = document.getElementById('backToTopBtn');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        backToTopBtn.style.display = 'block';
+    } else {
+        backToTopBtn.style.display = 'none';
+    }
+});
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+
+
+
+
+
+
+
+// testimonial section
