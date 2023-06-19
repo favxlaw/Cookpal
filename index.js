@@ -24,7 +24,7 @@ showPanel(0,'#ffffff');
 
 
 // animate on scroll
-const elements = document.querySelectorAll('.form, .inner-cont, .cards, .benefits-container .left, .benefits-container .right');
+const elements = document.querySelectorAll('.form, .inner-cont, .cards, .benefits-container .left, .benefits-container .right, .testimonial');
 
 const animateOnIntersection = (entries, observer) => {
     entries.forEach((entry) => {
@@ -74,3 +74,32 @@ function scrollToTop() {
 
 
 // testimonial section
+var swiper = new Swiper(".mySwiper", {
+    autoplay: {
+    delay: 6000,
+    },
+    effect: 'coverflow',
+    coverflowEffect: {
+        rotate: 120,
+        slideShadows: false,
+    },
+    slidesPerView: 1,
+    grabCursor: true,
+    loop: true,
+    speed: 1200,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
+
+
+
+
+
+// NAVBAR TOGGLE

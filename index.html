@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/abb406ab02.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/D. A.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +23,7 @@
 <body>
     <button id="backToTopBtn" onclick="scrollToTop()">
         <i class="fas fa-arrow-up"></i>
-        <span>Back to top</span>
+        <span>Top</span>
     </button>
     <div class="topbar">
         <a href="index.html" class="logo">CookPal</a>
@@ -31,18 +32,18 @@
             <a href="recipes.html" class="inactive">Recipes</a>
             <a href="about.html" class="inactive">About</a>
             <a href="register.html" class="inactive">Register</a>
-            <div class="login">
-                <a href="login.html" target="_blank">Login</a>
-            </div>
+            <button class="login">Login</button>
         </div>
     </div>
     <div class="hero">
-        <h2>Find a Recipe</h2>
-        <div class="form">
-            <form>
-                <input type="text" placeholder="Search for recipes" class="input_field">
-                <button>Search</button>
-            </form>
+        <div class="hero-contents">
+            <h2>Find a Recipe</h2>
+            <div class="form">
+                <form>
+                    <input type="text" placeholder="Search for recipes" class="input_field">
+                    <button>Search</button>
+                </form>
+            </div>
         </div>
     </div>
     <div class="how-to">
@@ -114,14 +115,6 @@
                         <h4>Yam & Egg</h4>
                         <button>View Details</button>
                     </div>
-                    <div class="cardp1">
-                        <h4>Jollof Rice</h4>
-                        <button>View Details</button>
-                    </div>
-                    <div class="cardp2">
-                        <h4>Beans & Plantain</h4>
-                        <button>View Details</button>
-                    </div>
                 </div>
             </div>
             <div class="tabPanel">
@@ -157,14 +150,6 @@
                     </div>
                     <div class="cardv4">
                         <h4>Yam & Egg</h4>
-                        <button>View Details</button>
-                    </div>
-                    <div class="cardv1">
-                        <h4>Jollof Rice</h4>
-                        <button>View Details</button>
-                    </div>
-                    <div class="cardv2">
-                        <h4>Beans & Plantain</h4>
                         <button>View Details</button>
                     </div>
                 </div>
@@ -204,14 +189,6 @@
                         <h4>Yam & Egg</h4>
                         <button>View Details</button>
                     </div>
-                    <div class="cardf1">
-                        <h4>Jollof Rice</h4>
-                        <button>View Details</button>
-                    </div>
-                    <div class="cardf2">
-                        <h4>Beans & Plantain</h4>
-                        <button>View Details</button>
-                    </div>
                 </div>
             </div>
             <div class="tabPanel">
@@ -247,14 +224,6 @@
                     </div>
                     <div class="cards4">
                         <h4>Yam & Egg</h4>
-                        <button>View Details</button>
-                    </div>
-                    <div class="cards1">
-                        <h4>Jollof Rice</h4>
-                        <button>View Details</button>
-                    </div>
-                    <div class="cards2">
-                        <h4>Beans & Plantain</h4>
                         <button>View Details</button>
                     </div>
                 </div>
@@ -297,8 +266,167 @@
     <div class="testimonials">
         <h1>Testimonials</h1>
         <p>What some users have to say about CookPal.</p>
+        <section class="testimonials-container">
+            <div class="testimonial mySwiper">
+                <div class="testi-content swiper-wrapper">
+                    <div class="slide swiper-slide">
+                        <img src="assets/user.png" alt="" class="image" />
+                        <p>
+                            CookPal has revolutionized the way I cook and plan meals for my family. With the easy-to-use interface, I can
+                            quickly search for new recipes and add them to my weekly meal plan. It has saved me so much time and effort in the
+                            kitchen!
+                        </p>
+                        <i class="bx bxs-quote-alt-left quote-icon"></i>
+                        <div class="details">
+                            <span class="name">Victor Adepoju</span>
+                            <span class="city">Lagos, Nigeria</span>
+                        </div>
+                    </div>
+                    <div class="slide swiper-slide">
+                        <img src="assets/user.png" alt="" class="image" />
+                        <p>
+                            As someone who is always on the go, CookPal has been a game-changer for me. With the ability to search for recipes
+                            on my phone, I can quickly plan meals while on the bus or waiting in line. It's made meal planning so much more
+                            convenient!
+                        </p>
+                        <i class="bx bxs-quote-alt-left quote-icon"></i>
+                        <div class="details">
+                            <span class="name">David Lee</span>
+                            <span class="city">Tokyo, Japan</span>
+                        </div>
+                    </div>
+                    <div class="slide swiper-slide">
+                        <img src="assets/user.png" alt="" class="image" />
+                        <p>
+                            CookPal has helped me expand my culinary horizons by introducing me to new and exciting recipes. The ingredient
+                            lists and cooking instructions are clear and easy to follow, making it simple to try new things in the kitchen. I
+                            highly recommend it!
+                        </p>
+                        <i class="bx bxs-quote-alt-left quote-icon"></i>
+                        <div class="details">
+                            <span class="name">Sarah Wilson</span>
+                            <span class="city">London, UK</span>
+                        </div>
+                    </div>
+                    <div class="slide swiper-slide">
+                        <img src="assets/user.png" alt="" class="image" />
+                        <p>
+                            Since I started using CookPal, I've been able to stick to a healthy diet without sacrificing taste. With so many
+                            nutritious recipes to choose from, I can always find something satisfying and delicious to make. Thank you, CookPal!
+                        </p>
+                        <i class="bx bxs-quote-alt-left quote-icon"></i>
+                        <div class="details">
+                            <span class="name">Carlos Rodriguez</span>
+                            <span class="city">Mexico City, Mexico</span>
+                        </div>
+                    </div>
+                    <div class="slide swiper-slide">
+                        <img src="assets/user.png" alt="" class="image" />
+                        <p>
+                            I've always struggled with meal planning and finding new recipes that my family will enjoy. CookPal has taken the
+                            stress out of meal planning with its user-friendly platform and diverse recipe selection. My family and I are loving
+                            all the new meals we've tried!
+                        </p>
+                        <i class="bx bxs-quote-alt-left quote-icon"></i>
+                        <div class="details">
+                            <span class="name">Jessica Martinez</span>
+                            <span class="city">Sydney, Australia</span>
+                        </div>
+                    </div>
+                    <div class="slide swiper-slide">
+                        <img src="assets/user.png" alt="" class="image" />
+                        <p>
+                            CookPal has completely transformed my kitchen routine. I used to dread planning meals and grocery shopping, but now
+                            I actually enjoy it thanks to CookPal. It's made cooking and meal planning fun and exciting again!
+                        </p>
+                        <i class="bx bxs-quote-alt-left quote-icon"></i>
+                        <div class="details">
+                            <span class="name">James Kim</span>
+                            <span class="city">Vancouver, Canada</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next nav-btn"></div>
+                <div class="swiper-button-prev nav-btn"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
     </div>
+    <footer>
+        <div class="row primary">
+            <div class="column about">
+    
+                <h3>CookPal</h3>
+    
+                <p>
+                    Our vision is to provide recipes to people from all over the world.
+                </p>
+    
+                <div class="social">
+                    <i class="fa-brands fa-facebook-square"></i>
+                    <i class="fa-brands fa-instagram-square"></i>
+                    <i class="fa-brands fa-twitter-square"></i>
+                    <i class="fa-brands fa-youtube-square"></i>
+                </div>
+            </div>
+    
+            <div class="column links">
+                <h3>About</h3>
+    
+                <ul>
+    
+                    <li>
+                        <a href="#about">About CookPal</a>
+                    </li>
+                    <li>
+                        <a href="#how-to">How it works</a>
+                    </li>
+                    <li>
+                        <a href="#terms-of-services">Terms Of Service</a>
+                    </li>
+                    <li>
+                        <a href="#privacy-policy">Privacy Policy</a>
+                    </li>
+                </ul>
+    
+            </div>
+    
+    
+            <div class="column links">
+                <h3>Community</h3>
+                <ul>
+                    <li>
+                        <a href="#events">Events</a>
+                    </li>
+                    <li>
+                        <a href="#blog">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#invite">Invite a friend</a>
+                    </li>
+                    <!-- <li>
+                        <a href="#support">Support</a>
+                    </li> -->
+                </ul>
+            </div>
+    
+            <div class="column subscribe">
+                <h3>Newsletter</h3>
+                <div>
+                    <input type="email" placeholder="Your email id here" />
+                    <button>Subscribe</button>
+                </div>
+    
+            </div>
+    
+        </div>
+    
+        <div class="row copyright">
+            <p>Copyright &copy; <strong>CookPal</strong>. All rights reserved</p>
+        </div>
+    </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="index.js"></script>
 </body>
 
