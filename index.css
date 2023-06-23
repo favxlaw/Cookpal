@@ -103,7 +103,7 @@ html {
     color: #5f5f5f;
 }
 
-.login {
+#login {
     display: grid;
     place-items: center;
     font-family: "Plus Jakarta Sans";
@@ -112,6 +112,7 @@ html {
     font-size: 2.4vh;
     text-decoration: none;
     width: 96px;
+    height: 40px;
     border: 1px solid #68a67d;
     background-color: #ffffff;
     color: #68a67d;
@@ -120,7 +121,7 @@ html {
     transition: 0.6s;
 }
 
-.login:hover {
+#login:hover {
     background-color: #68a67d;
     color: #ffffff;
 }
