@@ -42,6 +42,18 @@ h2 {
     color: #833500;
 }
 
+@media screen and (max-width: 800px) {
+    h2 {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h2 {
+        font-size: 24px;
+    }
+}
+
 h5, label {
     line-height: 0;
     padding: 0;
@@ -62,7 +74,7 @@ label {
     margin-top: 24px;
 }
 
-input[type=email], [type=password] {
+input[type=email], [type=password], [type=name] {
     width: 97.5%;
     height: 36px;
     margin-top: 10px;    
@@ -80,18 +92,18 @@ input[type=email], [type=password] {
 }
 
 @media screen and (max-width: 800px) {
-    input[type=email], [type=password] {
+    input[type=email], [type=password], [type=name] {
         width: 97%;
     }
 }
 
 @media screen and (max-width: 500px) {
-    input[type=email], [type=password] {
+    input[type=email], [type=password], [type=name] {
         width: 96%;
     }
 }
 
-input[type=email]:focus, [type=password]:focus {
+input[type=email]:focus, [type=password]:focus, [type=name]:focus {
     border: 1.5px solid #833500;
     outline: none;
 }
