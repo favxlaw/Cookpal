@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <script src="https://kit.fontawesome.com/abb406ab02.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/D. A.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <title>Verify your Account</title>
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <h2>Verification</h2>
+            <h5>Enter the Code sent to your email below.</h5>
+            <div class="form">
+                <form action="home.html">
+                    <label for="code">Code</label><br>
+                    <div class="code-container">
+                        <input name='code' class='code-input' maxlength="1" placeholder="0" required />
+                        <input name='code' class='code-input' maxlength="1" placeholder="0" required />
+                        <input name='code' class='code-input' maxlength="1" placeholder="0" required />
+                        <input name='code' class='code-input' maxlength="1" placeholder="0" required />
+                        <input name='code' class='code-input' maxlength="1" placeholder="0" required />
+                        <input name='code' class='code-input' maxlength="1" placeholder="0" required />
+                    </div><br>
+                    <h5 class="resend-code">Didn't receive a code?<a href="verification.html">Resend</a></h5><br><br>
+                    <input type="submit" value="Continue"><br><br>
+                    <h5>Wrong Email?<a href="register.html">Reset</a></h5>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const codeInputs = document.getElementsByClassName('code-input');
+
+            for (let i = 0; i < codeInputs.length; i++) {
+                codeInputs[i].addEventListener('input', function () {
+                    if (this.value.length >= 1) {
+                        if (i < codeInputs.length - 1) {
+                            codeInputs[i + 1].focus();
+                        }
+                    }
+                });
+
+                codeInputs[i].addEventListener('keydown', function (event) {
+                    if (event.key === 'Backspace') {
+                        if (this.value.length === 0 && i > 0) {
+                            codeInputs[i - 1].focus();
+                        }
+                        if (this.value.length === 0 && i === 0) {
+                            this.focus();
+                        }
+                    }
+                    if (event.key === 'ArrowLeft') {
+                        if (i > 0) {
+                            codeInputs[i - 1].focus();
+                        }
+                    }
+                    if (event.key === 'ArrowRight') {
+                        if (i < codeInputs.length - 1) {
+                            codeInputs[i + 1].focus();
+                        }
+                    }
+                });
+
+                codeInputs[i].addEventListener('focus', function () {
+                    this.placeholder = '';
+                });
+
+                codeInputs[i].addEventListener('blur', function () {
+                    this.placeholder = '0';
+                });
+
+                codeInputs[i].addEventListener('keypress', function (event) {
+                    const charCode = event.which ? event.which : event.keyCode;
+                    if (charCode < 48 || charCode > 57) {
+                        event.preventDefault();
+                    }
+                });
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

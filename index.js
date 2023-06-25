@@ -44,7 +44,7 @@ const observer = new IntersectionObserver(animateOnIntersection, options);
 elements.forEach((element) => {
     observer.observe(element);
 });
-
+//animate on scroll end
 
 
 
@@ -96,6 +96,11 @@ var swiper = new Swiper(".mySwiper", {
         prevEl: ".swiper-button-prev",
     },
 });
+
+
+
+
+
 
 
 
